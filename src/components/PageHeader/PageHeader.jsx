@@ -11,7 +11,7 @@ const PageHeader = (props) => {
     )
 
     const showUserDetails = () =>{
-        document.querySelector('.user-detail').classList.toggle("active");
+        document.querySelector('.user-detail').classList.toggle("active")
     }
 
     return (
