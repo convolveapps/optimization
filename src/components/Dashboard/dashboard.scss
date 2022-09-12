@@ -57,7 +57,7 @@
 .jobs{
   background-color: var(--clr-primary-400);
   color: var(--clr-white);
-  // height: 6rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,6 +76,7 @@
 
 .task-machine{
   margin-top: 1rem;
+  height: 6rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -83,7 +84,6 @@
   .task, .machine {
     background-color: var(--clr-primary-400);
     color: var(--clr-white);
-    // height: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
