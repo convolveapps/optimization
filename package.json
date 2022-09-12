@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run copy_assets",
     "preview": "vite preview",
     "copy_assets": "copyfiles -u 2 \"./src/assets/data/*.xlsx\" ./dist/assets/",
     "deploy": "npm install && npm run build"
