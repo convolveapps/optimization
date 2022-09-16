@@ -111,9 +111,10 @@ button{
 .btn-primary{
   background: var(--clr-primary-400);
   color: var(--clr-white);
+  border: 1px solid var(--clr-primary-400);
 }
 
-.btn-primary-outline{
+.btn-primary-outline, .btn-primary-outline-nonhover{
   background: var(--clr-white);
   color: var(--clr-primary-400);
   border: 1px solid var(--clr-primary-400);
@@ -127,13 +128,13 @@ button{
 
 .btn-warning-outline{
   background: var(--clr-white);
-  color: var(--clr-warning-900);
-  border: 1px solid var(--clr-warning-900);
+  color: var(--clr-warning-400);
+  border: 1px solid var(--clr-warning-400);
   transition: 0.1s all ease-in;
 }
 
 .btn-warning-outline:hover{
-  background: var(--clr-warning-900);
+  background: var(--clr-warning-400);
   color: var(--clr-white);
 }
 
@@ -144,6 +145,12 @@ button{
 .btn-danger{
   background-color: var(--clr-danger-400);
   color: var(--clr-white);
+}
+
+.btn-danger-outline{
+  background: var(--clr-white);
+  color: var(--clr-danger-400);
+  border: 1px solid var(--clr-danger-400);
 }
 
 .bg-shadow{
@@ -169,6 +176,12 @@ button{
   th{
     background-color: var(--clr-primary-400);
     color: var(--clr-white);
+  }
+}
+
+.tbl-sm{
+  td, th{
+    padding: 0.25rem 0.5rem;
   }
 }
 
@@ -201,4 +214,28 @@ button{
 
 .pointer{
   cursor: pointer;
+}
+
+.input-group{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0.5rem;
+
+  label{
+    width: 30%;
+  }
+
+  input, select {
+    width: 70%;
+    border: 0.5px solid black;
+    padding: 0.15rem;
+    cursor: pointer;
+  }
+
+  input:disabled{
+    background-color: var(--clr-black-100);
+    cursor: auto;
+  }
 }

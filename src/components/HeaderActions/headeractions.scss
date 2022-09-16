@@ -1,0 +1,28 @@
+.header-actions{
+  height: 3rem;
+  margin: 0rem 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .status{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+  }
+
+  .action-container{
+      margin-left: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+  }
+
+  a{
+      text-decoration: none;
+  }
+}

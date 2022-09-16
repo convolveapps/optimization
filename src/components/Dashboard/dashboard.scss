@@ -1,14 +1,13 @@
 .input-container, .output-container{
-  margin: 0rem 0.5rem;
-  padding: 0.5rem;
+  padding-right: 1rem;
   border-radius: 0.5rem;
+}
+.input-container{
   display: grid;
   gap: 0.5rem;
   align-items: center;
   justify-content: space-between;
-}
-.input-container{
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
 
   & > * {
     width: 100%;
@@ -21,16 +20,19 @@
   }
 }
 .output-container{
-  grid-template-columns: 2fr 3fr;
+  // grid-template-columns: 1fr;
+  // height: 100%;
+  // width: 100%;
+  height: 42rem;
 
-  & > * {
+  .output-chart {
     width: 100%;
     height: 100%;
     background-color: var(--clr-white);
     border-radius: 0.5rem;
     padding: 0.5rem;
     margin: 0.5rem;
-    overflow-y: auto;
+    // overflow-y: auto;
   }
 }
 
@@ -50,14 +52,14 @@
   }
 }
 
-.input-table > .card-heading{
+.output-table > .card-heading, .input-table > .card-heading{
   justify-content: space-between;
 }
 
 .jobs{
   background-color: var(--clr-primary-400);
   color: var(--clr-white);
-  height: 6rem;
+  height: 6.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,7 +78,7 @@
 
 .task-machine{
   margin-top: 1rem;
-  height: 6rem;
+  height: 6.75rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -93,6 +95,10 @@
       font-size: 2rem;
     }
   }
+}
+
+.chart-header{
+  margin-bottom: 1rem;
 }
 
 .chart-labels{
@@ -128,9 +134,12 @@
 .M05_Lathe{
   background-color: #00acc1;
 }
+.M06_Drilling{
+  background-color: #e64a19;
+}
 
 .output-chart .chart-labels{
-  margin-top: -10rem;
+  margin-top: -5rem;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }

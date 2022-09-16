@@ -8,7 +8,7 @@ function durationToMilliseconds(start, finish) {
   return (finishDateTime.getTime() - startDateTime.getTime());
 }
 
-const Outputs = ({data}) => {
+const Outputs = ({data, runOptimizer}) => {
 
   const [columns, setColumns] = useState([
     {type: "string", label: "JobId"},
@@ -41,53 +41,25 @@ const Outputs = ({data}) => {
         setShowChartLabel(true);
       },100)
     }
-  },[chartData])
+  },[runOptimizer])
 
   const options = {
     gantt: {
-      defaultStartDateMillis: new Date(2022, 8, 30, 22, 57, 32),
-      trackHeight: 30,
-      percentEnabled: false
-    },
-    hAxis: {
-      format: 'date'
+      defaultStartDateMillis: new Date(2022, 8, 29),
+      trackHeight: 25,
+      percentEnabled: false,
+      barHeight: 18
     }
   };
 
   return (
     <div className="output-container">
-      <div className="output-table">
-        <div className="card-heading">
-          <h4>Optimized schedule</h4>
-        </div>
-        <div className="card-detail tbl-responsive">
-          <table className="tbl tbl-bordered tbl-hover tbl-alternate">
-            <thead>
-              <tr>
-                <th>Job</th>
-                <th>Machine</th>
-                <th>Start</th>
-                <th>Finish</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                data.map((d,index) => 
-                  <tr key={index}>
-                    <td>{d.job}</td>
-                    <td>{d.machine}</td>
-                    <td>{d.start}</td>
-                    <td>{d.finish}</td>
-                  </tr>
-                )
-              }
-            </tbody>
-          </table>
-        </div>
-      </div>
       <div className="output-chart">
+        <div className="card-heading">
+          <h4>Task schedule</h4>
+        </div>
         {
-          chartData && chartData.length > 0
+          runOptimizer && chartData && chartData.length > 0
           ?
           <>
             <Chart chartType="Gantt" width="100%" height="100%" data={chartData} options={options} />

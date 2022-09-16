@@ -1,0 +1,50 @@
+.pop-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: var(--clr-black-300);
+  opacity: 0.3;
+}
+
+.popup_edit, .popup_input{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  background-color: var(--clr-white);
+}
+
+.popup_edit{
+  width: 70%;
+  height: 70%;
+}
+
+.popup_input{
+  width: 350px;
+  height: 420px;
+}
+
+.input-tasks-header{
+  height: 10%;
+  width: 100%;
+  font-size: var(--fs-10);
+  padding: 0.5rem;
+  box-shadow: 0rem 0rem 0.75rem 0rem var(--clr-black-250);
+}
+.input-tasks-content{
+  height: 80%;
+  width: 100%;
+  overflow-y: auto;
+}
+.input-data-action-container{
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  margin-right: 0.5rem;
+}
