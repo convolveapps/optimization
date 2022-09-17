@@ -15,8 +15,8 @@ const Dashboard = () => {
   const [pageName, setPageName] = useState("Optimization based scheduling");
   const [pageSummary, setPageSummary] = useState();
 
-  const [showData, setShowData] = useState(false);
-  const [showInputPopup, setShowInputPopup] = useState(true);
+  const [showData, setShowData] = useState(true);
+  const [showInputPopup, setShowInputPopup] = useState(false);
   const [showEditPopup, setShowEditPopup] = useState(false);
   const [editTasks, setEditTasks] = useState(false);
 
